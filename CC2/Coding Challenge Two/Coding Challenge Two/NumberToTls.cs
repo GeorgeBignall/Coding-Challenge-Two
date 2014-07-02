@@ -4,7 +4,7 @@ namespace Coding_Challenge_Two
 {
     public class NumberToTls
     {
-        public int Convert(int i)
+        public string Convert(int i)
         {
             throw new NotImplementedException();
         }
