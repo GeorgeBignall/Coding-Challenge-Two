@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
@@ -11,11 +12,13 @@ namespace Coding_Challenge_Two
     {
         public static void Main(string[] args)
         {
+            Console.Write("Please enter the desired frequency: ");
+            int inputFrequency = Convert.ToInt32(Console.ReadLine());
             string source = System.IO.File.ReadAllText(@"C:\Users\gwb\Documents\Coding challenges\tls.txt");
             SourceReformat stringReformat = new SourceReformat();
             source = stringReformat.Reformat(source);
             CountProcessor processor = new CountProcessor();
-            processor.Execute(source);
+            processor.Execute(source, inputFrequency);
         }
 
     }
