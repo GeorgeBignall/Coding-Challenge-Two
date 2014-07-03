@@ -12,9 +12,9 @@ namespace Coding_Challenge_Two
         public static void Main(string[] args)
         {
             string source = System.IO.File.ReadAllText(@"C:\Users\gwb\Documents\Coding challenges\tls.txt");
-            var stringReformat = new SourceReformat();
+            SourceReformat stringReformat = new SourceReformat();
             source = stringReformat.Reformat(source);
-            var processor = new CountProcessor();
+            CountProcessor processor = new CountProcessor();
             processor.Execute(source);
         }
 

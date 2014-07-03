@@ -6,14 +6,20 @@ namespace Coding_Challenge_Two
     {
         public void Execute(string source)
         {
-            var iterate = new NumberToTls();
-            var tls = new ThreeLetterSequence();
+            NumberToTls iterate = new NumberToTls();
+            ThreeLetterSequence tls = new ThreeLetterSequence();
 
             for (int i = 0; i < 17576; i++)
             {
-                var tlsString = iterate.ConvertToTls(i);
+                string tlsString = iterate.ConvertToTls(i);
                 int count = tls.Count(tlsString, source);
-                Console.WriteLine("{0}.  {1}", tlsString, count);
+
+                if (count == 99)
+                {
+                    Console.WriteLine("{0}.  {1}", tlsString, count);
+                }
+                    
+
             }
 
         }
